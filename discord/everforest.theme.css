@@ -1,0 +1,213 @@
+/**
+ * @name Everforest Dark Medium Enhanced
+ * @description A dark Discord theme based on the Everforest palette.
+ * @author 0xStraker (github.com/0xStraker)
+ * @version 1.0.0
+ * @palette https://github.com/0xStraker/everforest-theme-ports
+ */
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    /* font, change to '' for default discord font */
+    --font: 'figtree'; /* change to '' for default discord font */
+    --code-font: ''; /* change to '' for default discord font */
+    font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+
+    /* animation/transition options */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar */
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    /* dms button options */
+    --custom-dms-icon: hide;
+    --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: image;
+    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+
+    /* background image options */
+    --background-image: off;
+    --background-image-url: url('');
+
+    /* transparency/blur options */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* chatbar options */
+    --custom-chatbar: aligned;
+    --chatbar-height: 47px;
+    --chatbar-padding: 8px;
+
+    /* other options */
+    --small-user-panel: on;
+}
+
+/* Target buttons with yellow and cyan backgrounds specifically */
+button,
+.btn,
+.button {
+  font-weight: 600; /* bolder for readability */
+  transition: color 0.2s ease;
+}
+
+/* Buttons with yellow background (#DBBC7F) */
+button, .btn-yellow, .button-yellow {
+  background-color: var(--accent-3); /* #DBBC7F */
+  color: #FFFFFF !important; /* white text */
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7); /* subtle dark glow for contrast */
+  border: none !important; /* remove border */
+  font-weight: 600; /* keep text bold for better readability */
+}
+
+/* Hover: cyan background (#83C092), white text */
+button:hover, .btn-yellow:hover, .button-yellow:hover {
+  background-color: var(--accent-4) !important; /* #83C092 */
+  color: #FFFFFF !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  border: none !important;
+  cursor: pointer;
+}
+
+/* color options */
+:root {
+    --colors: on;
+
+    /* text colors */
+    --text-0: #D3C6AA; /* text on colored elements (brightWhite) */
+    --text-1: #D3C6AA; /* normally white text (brightWhite) */
+    --text-2: #D3C6AA; /* headings and important text (brightWhite) */
+    --text-3: #475258; /* normal text (white) */
+    --text-4: #7FBBB3; /* icon buttons and channels (blue) */
+    --text-5: #343F44; /* muted channels/chats and timestamps (brightBlack) */
+
+    /* background and dark colors */
+    --bg-1: #E69875; /* dark buttons when clicked (brightRed) */
+    --bg-2: #343F44; /* dark buttons (brightBlack) */
+    --bg-3: #232A2E; /* spacing, secondary elements (background) */
+    --bg-4: #232A2E; /* main background color (background) */
+    --hover: hsla(194, 29%, 59%, 0.1); /* approximation from blue/brightBlue */
+    --active: hsla(194, 29%, 59%, 0.2);
+    --active-2: hsla(194, 29%, 59%, 0.3);
+    --message-hover: hsla(0, 0%, 0%, 0.1);
+
+    /* accent colors */
+    --accent-1: #D699B6; /* purple */
+    --accent-2: #A7C080; /* green */
+    --accent-3: #DBBC7F; /* yellow */
+    --accent-4: #83C092; /* cyan */
+    --accent-5: #E67E80; /* red */
+    --accent-new: #E67E80; /* normally red (red) */
+    --mention: linear-gradient(to right, color-mix(in hsl, #D699B6, transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, #D699B6, transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, #475258, transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, #475258, transparent 95%) 40%, transparent);
+
+    /* status indicator colors */
+    --online: #A7C080;   /* green */
+    --dnd: #E67E80;      /* red */
+    --idle: #DBBC7F;     /* yellow */
+    --streaming: #D699B6; /* purple */
+    --offline: #7FBBB3;  /* blue */
+
+    /* border colors */
+    --border-light: hsla(52, 40%, 70%, 0.1); /* subtle light border */
+    --border: hsla(52, 40%, 70%, 0.2);
+    --border-hover: hsla(52, 40%, 70%, 0.3);
+    --button-border: hsla(52, 40%, 70%, 0.1);
+
+    /* base colors */
+    --red-1: #E69875;
+    --red-2: #E67E80;
+    --red-3: #E67E80;
+    --red-4: #E67E80;
+    --red-5: #E67E80;
+
+    --green-1: #A7C080;
+    --green-2: #A7C080;
+    --green-3: #A7C080;
+    --green-4: #A7C080;
+    --green-5: #A7C080;
+
+    --blue-1: #7FBBB3;
+    --blue-2: #7FBBB3;
+    --blue-3: #7FBBB3;
+    --blue-4: #7FBBB3;
+    --blue-5: #7FBBB3;
+
+    --yellow-1: #DBBC7F;
+    --yellow-2: #DBBC7F;
+    --yellow-3: #DBBC7F;
+    --yellow-4: #DBBC7F;
+    --yellow-5: #DBBC7F;
+
+    --purple-1: #D699B6;
+    --purple-2: #D699B6;
+    --purple-3: #D699B6;
+    --purple-4: #D699B6;
+    --purple-5: #D699B6;
+}
+
+/* --- BEGIN PATCH FOR BETTER MESSAGE READABILITY --- */
+
+:root {
+  /* Normal message text: warmer, lighter off-white for better contrast */
+  --text-3: #D3C6AA !important;
+
+  /* Muted text (timestamps, muted chats): brighter and clearer */
+  --text-5: #7FBBB3 !important;
+
+  /* Background color: keep dark consistent */
+  --bg-4: #232A2E !important;
+}
+
+/* Add subtle text-shadow to message username and content for improved legibility */
+.message-username,
+.message-content {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional: slightly bold normal message text for better visibility */
+.message-content {
+  font-weight: 500;
+}
+
+/* Fix selected text color on yellow (#DBBC7F) highlight */
+::selection {
+  background-color: #DBBC7F !important;
+  color: #232A2E !important; /* Dark background color for contrast */
+  text-shadow: none !important;
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: #DBBC7F !important;
+  color: #232A2E !important;
+  text-shadow: none !important;
+}
+
+/* --- END PATCH --- */
