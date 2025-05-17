@@ -1,0 +1,176 @@
+/**
+ * @name Everforest Discord Theme
+ * @description A true Everforest-inspired color scheme for Discord's UI.
+ * @author 0xStraker
+ * @version 1.0.0
+ * @website https://github.com/0xStraker
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+/* Base Everforest colors */
+:root {
+  /* Accent Colors */
+  --accentcolor: 138, 146, 112;      /* Everforest Green */
+  --accentcolor2: 199, 146, 114;     /* Soft Warm Brown */
+  --linkcolor: 142, 192, 124;         /* Light Green */
+  --mentioncolor: 218, 178, 112;      /* Yellowish */
+
+  /* Text Colors */
+  --textbrightest: 223, 223, 197;     /* Soft Off-white */
+  --textbrighter: 203, 203, 174;
+  --textbright: 183, 183, 154;
+  --textdark: 146, 146, 121;
+  --textdarker: 124, 124, 102;
+  --textdarkest: 105, 105, 86;
+
+  /* Background Colors */
+  --backgroundaccent: 90, 99, 79;     /* Dark Olive */
+  --backgroundprimary: 78, 87, 70;    /* Medium Olive */
+  --backgroundsecondary: 66, 73, 60;  /* Darker Olive */
+  --backgroundsecondaryalt: 58, 64, 52;
+  --backgroundtertiary: 50, 55, 45;
+  --backgroundfloating: 40, 45, 37;   /* Floating windows, popouts */
+
+  /* Font */
+  --font: 'Fira Code', monospace;
+
+  /* Settings Icons */
+  --settingsicons: 1;
+}
+
+/* General Backgrounds */
+.theme-dark {
+  background-color: rgb(var(--backgroundprimary)) !important;
+  color: rgb(var(--textbrightest)) !important;
+  font-family: var(--font), monospace !important;
+}
+
+/* Sidebar */
+.theme-dark .sidebar-1tnWFu {
+  background-color: rgb(var(--backgroundaccent)) !important;
+  border-right: 1px solid rgba(var(--backgroundsecondaryalt), 0.5);
+}
+
+/* Channels & Messages Background */
+.theme-dark .channelsWrapper-3gS3bQ,
+.theme-dark .container-3baos1,
+.theme-dark .chatContent-aKzOUd {
+  background-color: rgb(var(--backgroundprimary)) !important;
+}
+
+/* Message Bubbles */
+.theme-dark .message-2qnXI6 {
+  background-color: rgba(var(--backgroundsecondary), 0.6) !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 6px !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  color: rgb(var(--textbrightest)) !important;
+}
+
+/* Mentions */
+.theme-dark .mention-3Sx2V7 {
+  background-color: rgba(var(--mentioncolor), 0.3);
+  color: rgb(var(--mentioncolor)) !important;
+  font-weight: 600 !important;
+}
+
+/* Links */
+.theme-dark a {
+  color: rgb(var(--linkcolor)) !important;
+  text-decoration: underline !important;
+}
+
+/* Scrollbars */
+.theme-dark ::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgb(var(--backgroundsecondaryalt));
+}
+.theme-dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--accentcolor));
+  border-radius: 10px;
+}
+
+/* Buttons */
+.theme-dark button {
+  background-color: rgb(var(--backgroundsecondaryalt));
+  border: 1px solid rgb(var(--backgroundtertiary));
+  color: rgb(var(--textbright)) !important;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+.theme-dark button:hover {
+  background-color: rgb(var(--accentcolor));
+  color: rgb(var(--textbrightest)) !important;
+}
+
+/* Text Inputs */
+.theme-dark input, 
+.theme-dark textarea {
+  background-color: rgb(var(--backgroundsecondaryalt)) !important;
+  color: rgb(var(--textbrightest)) !important;
+  border: 1px solid rgb(var(--backgroundtertiary)) !important;
+  border-radius: 6px !important;
+  font-family: var(--font) !important;
+}
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+  color: rgb(var(--textdarker)) !important;
+}
+
+/* Hover effects */
+.theme-dark .container-3baos1:hover {
+  background-color: rgb(var(--backgroundsecondaryalt));
+}
+
+/* Settings sidebar */
+.theme-dark .settingsWrapper-1T74xQ {
+  background-color: rgb(var(--backgroundprimary)) !important;
+}
+
+/* Modal background */
+.theme-dark .modal-3KfcvY {
+  background-color: rgb(var(--backgroundfloating)) !important;
+  color: rgb(var(--textbrightest)) !important;
+  border-radius: 12px !important;
+}
+
+/* Status colors */
+.status-online { color: #A3BE8C !important; }
+.status-idle { color: #EBCB8B !important; }
+.status-dnd { color: #BF616A !important; }
+.status-offline { color: #4C566A !important; }
+
+/* Scrollbar for popouts */
+.theme-dark .popout-3r7t59 ::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--accentcolor2));
+  border-radius: 10px;
+}
+
+/* Tooltip */
+.theme-dark .tooltip-3t68pz {
+  background-color: rgb(var(--backgroundsecondaryalt)) !important;
+  color: rgb(var(--textbrightest)) !important;
+  border-radius: 5px;
+  font-family: var(--font);
+}
+
+/* Clean up input focus */
+.theme-dark input:focus,
+.theme-dark textarea:focus,
+.theme-dark button:focus {
+  outline: 2px solid rgb(var(--accentcolor));
+  outline-offset: 2px;
+}
+
+/* Misc small tweaks */
+.theme-dark .header-3TQKJb,
+.theme-dark .topSection-3V6rG7 {
+  background-color: rgb(var(--backgroundaccent)) !important;
+  color: rgb(var(--textbrightest)) !important;
+  font-family: var(--font) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
