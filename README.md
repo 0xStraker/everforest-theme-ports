@@ -1,6 +1,6 @@
 # Everforest Dark Medium Enhanced Theme Ports
 
-A collection of theme ports based on the beautiful [Everforest](https://github.com/sainnhe/everforest-vscode-theme) color palette, bringing its warm and soothing dark theme to various applications and platforms.
+A collection of theme ports based on the beautiful [Everforest](https://github.com/sainnhe/everforest) color palette, bringing its warm and soothing dark theme to various applications and platforms.
 
 ![Everforest Dark Medium Enhanced](discord/everforest-logo.png)
 
@@ -103,7 +103,7 @@ Yet Another Status Bar theme for your development environment, bringing the Ever
 
 ## 🙏 Credits
 
-- Original Everforest theme by [sainnhe](https://github.com/sainnhe/everforest-vscode-theme)
+- Original Everforest theme by [sainnhe](https://github.com/sainnhe/everforest)
 - Discord theme inspired by [Midnight Discord](https://github.com/refact0r/midnight-discord)
 - All ports created by [0xStraker](https://github.com/0xStraker)
 
