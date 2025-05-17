@@ -1,176 +1,126 @@
 /**
- * @name Everforest Discord Theme
- * @description A true Everforest-inspired color scheme for Discord's UI.
+ * @name everforest-dark
+ * @description Discord theme inspired by Everforest Dark color scheme — clean, cozy, no underlines.
  * @author 0xStraker
  * @version 1.0.0
- * @website https://github.com/0xStraker
+ * @source https://github.com/0xStraker
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-/* Base Everforest colors */
 :root {
-  /* Accent Colors */
-  --accentcolor: 138, 146, 112;      /* Everforest Green */
-  --accentcolor2: 199, 146, 114;     /* Soft Warm Brown */
-  --linkcolor: 142, 192, 124;         /* Light Green */
-  --mentioncolor: 218, 178, 112;      /* Yellowish */
+  /* Everforest Dark palette */
+  --background-primary: 40, 42, 37;
+  --background-secondary: 50, 53, 48;
+  --background-tertiary: 60, 63, 58;
+  --background-floating: 66, 68, 62;
 
-  /* Text Colors */
-  --textbrightest: 223, 223, 197;     /* Soft Off-white */
-  --textbrighter: 203, 203, 174;
-  --textbright: 183, 183, 154;
-  --textdark: 146, 146, 121;
-  --textdarker: 124, 124, 102;
-  --textdarkest: 105, 105, 86;
+  --text-primary: 215, 209, 185;
+  --text-secondary: 185, 181, 156;
+  --text-muted: 140, 138, 122;
 
-  /* Background Colors */
-  --backgroundaccent: 90, 99, 79;     /* Dark Olive */
-  --backgroundprimary: 78, 87, 70;    /* Medium Olive */
-  --backgroundsecondary: 66, 73, 60;  /* Darker Olive */
-  --backgroundsecondaryalt: 58, 64, 52;
-  --backgroundtertiary: 50, 55, 45;
-  --backgroundfloating: 40, 45, 37;   /* Floating windows, popouts */
+  --accent-green: 136, 192, 125;
+  --accent-orange: 227, 160, 94;
+  --accent-red: 211, 104, 99;
+  --accent-yellow: 229, 206, 114;
 
-  /* Font */
-  --font: 'Fira Code', monospace;
+  --scrollbar-thumb: 98, 100, 90;
+  --scrollbar-thumb-hover: 136, 192, 125;
 
-  /* Settings Icons */
-  --settingsicons: 1;
+  --font-family: 'Fira Code', monospace;
 }
 
-/* General Backgrounds */
+/* General background and font */
 .theme-dark {
-  background-color: rgb(var(--backgroundprimary)) !important;
-  color: rgb(var(--textbrightest)) !important;
-  font-family: var(--font), monospace !important;
+  background-color: rgb(var(--background-primary)) !important;
+  color: rgb(var(--text-primary)) !important;
+  font-family: var(--font-family) !important;
 }
 
-/* Sidebar */
-.theme-dark .sidebar-1tnWFu {
-  background-color: rgb(var(--backgroundaccent)) !important;
-  border-right: 1px solid rgba(var(--backgroundsecondaryalt), 0.5);
+/* Remove underlines from links, mentions */
+a, .mention, .username {
+  text-decoration: none !important;
+  color: rgb(var(--accent-green)) !important;
+  font-weight: 600;
 }
 
-/* Channels & Messages Background */
-.theme-dark .channelsWrapper-3gS3bQ,
-.theme-dark .container-3baos1,
-.theme-dark .chatContent-aKzOUd {
-  background-color: rgb(var(--backgroundprimary)) !important;
+/* Channel list background */
+.sidebar-2K8pFh, .guildsWrapper-1tL0zW {
+  background-color: rgb(var(--background-secondary)) !important;
 }
 
-/* Message Bubbles */
-.theme-dark .message-2qnXI6 {
-  background-color: rgba(var(--backgroundsecondary), 0.6) !important;
-  border-radius: 10px !important;
-  padding: 8px 12px !important;
-  margin-bottom: 6px !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  color: rgb(var(--textbrightest)) !important;
+/* Channel list item hover & selected */
+.item-2pqOYs:hover, .item-2pqOYs.selected-2WKs3c {
+  background-color: rgb(var(--background-tertiary)) !important;
+  border-radius: 8px;
 }
 
-/* Mentions */
-.theme-dark .mention-3Sx2V7 {
-  background-color: rgba(var(--mentioncolor), 0.3);
-  color: rgb(var(--mentioncolor)) !important;
-  font-weight: 600 !important;
+/* Server list background */
+.guildsWrapper-1tL0zW {
+  background-color: rgb(var(--background-secondary)) !important;
 }
 
-/* Links */
-.theme-dark a {
-  color: rgb(var(--linkcolor)) !important;
-  text-decoration: underline !important;
-}
-
-/* Scrollbars */
-.theme-dark ::-webkit-scrollbar {
-  width: 8px;
-  background-color: rgb(var(--backgroundsecondaryalt));
-}
-.theme-dark ::-webkit-scrollbar-thumb {
-  background-color: rgb(var(--accentcolor));
+/* Message background bubbles */
+.message-2qnXI6 {
+  background-color: rgb(var(--background-floating)) !important;
   border-radius: 10px;
+  padding: 8px 12px;
 }
 
-/* Buttons */
-.theme-dark button {
-  background-color: rgb(var(--backgroundsecondaryalt));
-  border: 1px solid rgb(var(--backgroundtertiary));
-  color: rgb(var(--textbright)) !important;
-  border-radius: 6px;
+/* Message text colors */
+.messageContent-2t3eCI, .markup-2BOw-j {
+  color: rgb(var(--text-primary)) !important;
+  font-family: var(--font-family) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-secondary));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--scrollbar-thumb));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--scrollbar-thumb-hover));
+}
+
+/* Buttons and UI accents */
+.button-38aScr, .button-1e7p4p {
+  background-color: transparent !important;
+  border: 1.5px solid rgb(var(--accent-green)) !important;
+  color: rgb(var(--accent-green)) !important;
+  border-radius: 8px;
+  font-weight: 600;
   transition: background-color 0.2s ease;
 }
-.theme-dark button:hover {
-  background-color: rgb(var(--accentcolor));
-  color: rgb(var(--textbrightest)) !important;
+.button-38aScr:hover, .button-1e7p4p:hover {
+  background-color: rgb(var(--accent-green));
+  color: rgb(var(--background-primary));
 }
 
-/* Text Inputs */
-.theme-dark input, 
-.theme-dark textarea {
-  background-color: rgb(var(--backgroundsecondaryalt)) !important;
-  color: rgb(var(--textbrightest)) !important;
-  border: 1px solid rgb(var(--backgroundtertiary)) !important;
-  border-radius: 6px !important;
-  font-family: var(--font) !important;
-}
-.theme-dark input::placeholder,
-.theme-dark textarea::placeholder {
-  color: rgb(var(--textdarker)) !important;
-}
-
-/* Hover effects */
-.theme-dark .container-3baos1:hover {
-  background-color: rgb(var(--backgroundsecondaryalt));
-}
-
-/* Settings sidebar */
-.theme-dark .settingsWrapper-1T74xQ {
-  background-color: rgb(var(--backgroundprimary)) !important;
-}
-
-/* Modal background */
-.theme-dark .modal-3KfcvY {
-  background-color: rgb(var(--backgroundfloating)) !important;
-  color: rgb(var(--textbrightest)) !important;
-  border-radius: 12px !important;
-}
-
-/* Status colors */
-.status-online { color: #A3BE8C !important; }
-.status-idle { color: #EBCB8B !important; }
-.status-dnd { color: #BF616A !important; }
-.status-offline { color: #4C566A !important; }
-
-/* Scrollbar for popouts */
-.theme-dark .popout-3r7t59 ::-webkit-scrollbar-thumb {
-  background-color: rgb(var(--accentcolor2));
+/* Modals and popups */
+.modal-3FCp9y {
+  background-color: rgb(var(--background-secondary)) !important;
   border-radius: 10px;
+  color: rgb(var(--text-primary)) !important;
 }
 
-/* Tooltip */
-.theme-dark .tooltip-3t68pz {
-  background-color: rgb(var(--backgroundsecondaryalt)) !important;
-  color: rgb(var(--textbrightest)) !important;
-  border-radius: 5px;
-  font-family: var(--font);
+/* Status indicators */
+.status-online {
+  background-color: rgb(var(--accent-green)) !important;
 }
-
-/* Clean up input focus */
-.theme-dark input:focus,
-.theme-dark textarea:focus,
-.theme-dark button:focus {
-  outline: 2px solid rgb(var(--accentcolor));
-  outline-offset: 2px;
+.status-idle {
+  background-color: rgb(var(--accent-orange)) !important;
 }
-
-/* Misc small tweaks */
-.theme-dark .header-3TQKJb,
-.theme-dark .topSection-3V6rG7 {
-  background-color: rgb(var(--backgroundaccent)) !important;
-  color: rgb(var(--textbrightest)) !important;
-  font-family: var(--font) !important;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.status-dnd {
+  background-color: rgb(var(--accent-red)) !important;
 }
-
+.status-offline {
+  background-color: rgb(var(--text-muted)) !important;
+}
