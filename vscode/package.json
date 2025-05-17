@@ -1,0 +1,44 @@
+{
+    "name": "everforest-dark-medium-enhanced",
+    "displayName": "Everforest Dark Medium Enhanced",
+    "description": "A dark theme based on the Everforest palette with enhanced contrast and readability. Features carefully crafted syntax highlighting and UI elements for a comfortable coding experience.",
+    "version": "1.0.0",
+    "publisher": "0xstraker",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Everforest Dark Medium Enhanced",
+                "uiTheme": "vs-dark",
+                "path": "./themes/everforest-dark-medium-enhanced-color-theme.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/0xStraker/everforest-theme-ports"
+    },
+    "bugs": {
+        "url": "https://github.com/0xStraker/everforest-theme-ports/issues"
+    },
+    "homepage": "https://github.com/0xStraker/everforest-theme-ports",
+    "keywords": [
+        "theme",
+        "dark",
+        "everforest",
+        "color-theme",
+        "syntax-highlighting"
+    ],
+    "author": "0xStraker",
+    "license": "MIT",
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#232A2E",
+        "theme": "dark"
+    }
+} 
