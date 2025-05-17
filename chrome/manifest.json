@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "name": "Everforest Dark Medium Enhanced Chrome Theme",
+  "theme": {
+    "colors": {
+      "background_tab_incognito": [35, 42, 46],         
+      "background_tab_incognito_inactive": [52, 63, 68], 
+      "bookmark_text": [211, 198, 170],                  
+      "frame": [35, 42, 46],                             
+      "frame_inactive": [71, 82, 88],                    
+      "omnibox_background": [35, 42, 46],               
+      "omnibox_text": [211, 198, 170],                   
+      "tab_text": [211, 198, 170],                        
+      "ntp_header": [35, 42, 46],                        
+      "toolbar": [52, 63, 68],                            
+      "toolbar_button_icon": [211, 198, 170],             
+      "toolbar_text": [211, 198, 170]                     
+    }
+  },
+  "options": {
+    "#232A2E": [35, 42, 46],
+    "#343F44": [52, 63, 68],
+    "#7FBBB3": [127, 187, 179],
+    "#83C092": [131, 192, 146],
+    "#A7C080": [167, 192, 128],
+    "#D699B6": [214, 153, 182],
+    "#E69875": [230, 152, 117],
+    "#D3C6AA": [211, 198, 170],
+    "#DBBC7F": [219, 188, 127],
+    "#475258": [71, 82, 88],
+    "#E67E80": [230, 126, 128]
+  }
+}
