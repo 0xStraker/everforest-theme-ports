@@ -55,13 +55,31 @@ A carefully crafted VSCode theme that brings the Everforest Dark Medium Enhanced
 - Special styling for Markdown and other common file types
 
 #### Installation Guide
-1. Download the theme files from the [vscode](vscode/) directory
+There are two ways to install the theme:
+
+##### Method 1: Install from VSIX (Recommended)
+1. Download the latest VSIX file from the [vscode](vscode/) directory
 2. Open VSCode
 3. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
 4. Type "Install from VSIX" and select the option
-5. Navigate to and select the theme file
+5. Navigate to and select the downloaded VSIX file
 6. Restart VSCode
 7. Select the theme from the Color Theme picker (`Ctrl+K Ctrl+T`)
+
+##### Method 2: Manual Installation
+1. Clone this repository or download the [vscode](vscode/) directory
+2. Open VSCode
+3. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
+4. Type "Developer: Install Extension from Location" and select the option
+5. Navigate to and select the `vscode` directory
+6. Restart VSCode
+7. Select the theme from the Color Theme picker (`Ctrl+K Ctrl+T`)
+
+##### Setting as Default Theme
+To set this theme as your default:
+1. Open VSCode Settings (`Ctrl+,` or `Cmd+,`)
+2. Search for "workbench.colorTheme"
+3. Select "Everforest Dark Medium Enhanced" from the dropdown
 
 ### [Windows Terminal Theme](windows-terminal/)
 Transform your Windows Terminal with the Everforest palette, perfect for developers and terminal enthusiasts.
