@@ -38,14 +38,17 @@ body {
 
     /* dms button options */
     --custom-dms-icon: hide;
-    --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-url: url('https://raw.githubusercontent.com/0xStraker/everforest-theme-ports/main/discord/everforest-logo.png');
     --dms-icon-svg-size: 90%;
     --dms-icon-color-before: var(--icon-secondary);
     --dms-icon-color-after: var(--white);
     --custom-dms-background: image;
-    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+    --dms-background-image-url: url('https://raw.githubusercontent.com/0xStraker/everforest-theme-ports/main/discord/everforest-logo.png');
     --dms-background-image-size: cover;
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+    --dms-background-image-position: center;
+    --dms-background-border-radius: 50%; /* ensures circular rendering */
+    --dms-background-image-repeat: no-repeat;
+    --dms-background-color: transparent;
 
     /* background image options */
     --background-image: off;
